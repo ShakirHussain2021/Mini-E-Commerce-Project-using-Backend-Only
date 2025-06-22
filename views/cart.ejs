@@ -1,6 +1,6 @@
 <%- include('./partials/header') %>
    <% user.cart.forEach(function(item){ %>
-     <div class="w-full h-screen flex items-start px-20 py-20 gap-10 bg-neutral-100">
+     <div class="w-full h-screen flex items-start px-20 py-20 gap-10 bg-stone-400 " >
         <div class="w-[30%] rounded-md overflow-hidden">
             <div class="w-full flex justify-center items-center h-80 bg-[<%= item.bgcolor %>]">
                 <img class="h-[18rem]" src="data:image/jpeg;base64, <%= item.image.toString('base64') %>" alt="">

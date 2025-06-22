@@ -3,6 +3,7 @@ const router = express.Router();
 const isloggedin = require("../middlewares/isLoggedIn");
 const productModel = require("../models/product-model");
 const userModel = require("../models/user-model");
+const ownerModel = require("../models/owner-model");
 
 router.get("/", function(req, res){
     let error = req.flash("Error");
@@ -40,9 +41,15 @@ router.get("/addtocart/:productid", isloggedin , async function(req, res){
 
 
 //admin
-// router.post("/admin", isloggedin , async function(req, res){
-//     res.render("admin");
-// }); 
+router.post("/admin", isloggedin , async function(req, res){
+    res.render("admin");
+}); 
+
+
+//owner-login
+router.get("/owner-login", isloggedin , async function(req, res){
+    res.render("owner-login");
+}); 
 
 
 //logout
